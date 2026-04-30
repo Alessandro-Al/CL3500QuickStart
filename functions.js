@@ -54,13 +54,23 @@ function updateBoardImage(tabLabel) {
   }
   document.getElementById("board-img").src = img;
   if (!fw.descricaoPlaca) return;
+
   const desc = fw.descricaoPlaca;
   const container = document.getElementById("board-description");
+
   let html = `<h3>${desc.titulo}</h3>`;
+
   // 🔹 Lista variável de parâmetros
-  html += desc.hardware.map(p =>
-    `<p><strong>${p.label}</strong> ${p.valor}</p>`
-  ).join("");
+  if ((desc.titulo.startsWith("Checklist"))) {
+    html += desc.hardware.map(p =>
+      `<p><label><input type="checkbox"> <strong>${p.label}:</strong> ${p.valor}</label></p>`
+    ).join("");
+  } else {
+    html += desc.hardware.map(p =>
+      `<p><strong>${p.label}</strong> ${p.valor}</p>`
+    ).join("");
+
+  }
   container.innerHTML = html;
 }
 
@@ -110,20 +120,20 @@ function loadFirmware() {
   const contentContainer = document.getElementById("tab-contents");
   contentContainer.innerHTML = "";
   tabsContainer.innerHTML = "";
-  
+
   // Itera sobre o array de tabs
   tabs.forEach(tab => {
     const label = tab.label;
     const ordered = tab.ordered || false;
     const value = tab.items || [];
-    
+
     const isEmpty =
       value === undefined ||
       value === null ||
       (typeof value === "string" && value.trim() === "") ||
       (Array.isArray(value) && value.length === 0);
     if (isEmpty) return;
-    
+
     const btn = document.createElement("div");
     btn.className = "tab";
     btn.innerText = label;

@@ -1,16 +1,35 @@
 const DATA = {
-   descricao: "ID FW:",
+  descricao: "ID FW:",
   fw_id: "CL350[SUBFW]HW[2/3]BAL[0/1]V[versão]-[OPCOES].hex",
- descricaoPlaca: {
-    titulo: "CL3500 - Classificadora de Peso Lenke",
+  descricaoPlaca: {
+    titulo: "Checklist CL3500 setup",
     hardware: [
-      { label: "Grau de Proteção:", valor: " IP 67 " },
-      { label: "Construção:", valor: " Aço inoxidável - AISI 304 " },
-      { label: "Conectividade:", valor: " Serial:RS-232 Ethernet:IEEE 802.3 " },
-      { label: "Tensão:", valor: " 3x380 + N " },
-      { label: "Consumo:", valor: " 0,75 Kw " },
-      { label: "Capacidade:", valor: " até 160 peças por minuto " },
-      { label: "Resolução:", valor: " de 1 g" },
+
+      { label: "Alimentação elétrica conectada", valor: "" },
+      { label: "Tensão correta (3x380V + N + Terra)", valor: "" },
+      { label: "Aterramento conectado", valor: "" },
+
+      { label: "Ar comprimido ligado (se aplicável)", valor: "" },
+      { label: "Pressão de ar dentro do especificado", valor: "" },
+
+      { label: "Cabos e conectores bem fixados", valor: "" },
+      { label: "Comunicação (Ethernet/RS-232) conectada", valor: "" },
+
+      { label: "Sensores posicionados corretamente", valor: "" },
+      { label: "Esteira livre e alinhada", valor: "" },
+
+      { label: "Sistema limpo (sem sujeira/objetos)", valor: "" },
+      { label: "Proteções e carenagens fechadas", valor: "" },
+
+      { label: "Emergência (E-Stop) testada", valor: "" },
+      { label: "Botões e IHM respondendo", valor: "" },
+
+      { label: "Parâmetros básicos carregados", valor: "" },
+      { label: "Peso calibrado", valor: "" },
+
+      { label: "Teste com produto realizado", valor: "" },
+      { label: "Rejeição funcionando (se houver)", valor: "" }
+
     ],
   },
   tabs: [
@@ -43,10 +62,10 @@ const DATA = {
       image: "../img/Painel.png",
       ordered: true,
       items: [
-        "Verificar tensão de entrada e conexões elétricas",
+        "<a href='manual_eletrico.html'>Verificar tensão de entrada e conexões elétricas</a>",
         "Ligar disjuntor geral do painel elétrico",
         "Aguardar inicialização do sistema",
-        "Confirmar ausência de alarmes no controlador"
+        "Confirmar ausência de alarmes no controlador",
       ]
     },
 
@@ -67,7 +86,8 @@ const DATA = {
       image: "../img/Controlador.png",
       ordered: true,
       items: [
-        "Acessar o terminal de controle (HMI)",
+        { label: "Acessar o terminal de controle ", title: "HMI LK200 ou LK300" },
+
         "Selecionar modo de operação",
         "Inicializar sistema de transporte (esteiras)",
         "Verificar leitura dos sensores",
