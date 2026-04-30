@@ -1,0 +1,144 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f4f4f4;
+}
+
+header {
+  background: #003366;
+  color: #fff;
+  padding: 16px;
+}
+
+h2 {
+  margin: 20px auto 10px auto;
+  /* Centraliza horizontalmente e dá espaço em cima/baixo */
+  text-align: center;
+  /* Centraliza o texto dentro do h2 */
+  font-size: 36px;
+  /* Aumenta o tamanho do texto */
+  background-color: #359cb6;
+  /* Mantém a cor de destaque */
+  color: #fff;
+  /* Texto branco para melhor contraste */
+  padding: 12px 24px;
+  /* Mais espaço interno */
+  border-radius: 10px;
+  /* Cantos arredondados mais suaves */
+  /*  display: table;               /* Mantém a barra do tamanho do conteúdo */
+  font-weight: bold;
+  /* Negrito */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  /* Sombra mais visível */
+}
+
+.tabs {
+  display: flex;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 20px;
+}
+
+
+.tab {
+  padding: 10px 16px;
+  cursor: pointer;
+  border: none;
+  background: #eee;
+  margin-right: 4px;
+  border-radius: 4px 4px 0 0;
+  transition: all 0.2s ease;
+}
+
+.tab:not(.active):hover {
+  background: #cfe3ff;
+  transform: translateY(-2px);
+}
+
+/* .tab {
+  padding: 10px 16px;
+  cursor: pointer;
+  border: none;
+  background: #eee;
+  margin-right: 4px;
+  border-radius: 4px 4px 0 0;
+}
+
+.tab:hover {
+  background: #d0e7ff;
+} */
+
+.tab.active {
+  background: #676caf;
+  border: none;
+  /* remove borda padrão */
+  border-bottom: 2px solid #003366;
+  /* mantém só a linha inferior */
+  font-weight: bold;
+  border-radius: 4px 4px 0 0;
+  /* mantêm cantos arredondados só em cima */
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+ul,
+ol {
+  padding-bottom: 20px;
+}
+
+b {
+  font-weight: bold;
+  /* Já é bold por <b>, mas reforça */
+  color: #3611da;
+  /* Pode deixar mais escuro para contraste */
+}
+
+.note {
+  font-style: italic;
+  font-size: 0.85em;
+  color: #3a25ac;
+  margin-left: 12px;
+  margin-top: 2px;
+}
+
+#board-view {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#board-img {
+  max-width: 100%;
+  max-width: 800px;
+  height: 600px;
+  object-fit: contain;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.board-container {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  margin-top: 20px;
+}
+
+.board-description {
+  max-width: 800px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1;
+}
+
+.board-description p {
+  margin: 8px 0;
+}
+
+.board-description h3 {
+  margin-top: 0;
+  color: #2c3e50;
+}
