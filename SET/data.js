@@ -1,6 +1,6 @@
 const DATA = {
-  descricao: "Setup inicial",
-  fw_id: "",
+   descricao: "ID FW:",
+  fw_id: "CL350[SUBFW]HW[2/3]BAL[0/1]V[versão]-[OPCOES].hex",
  descricaoPlaca: {
     titulo: "CL3500 - Classificadora de Peso Lenke",
     hardware: [
