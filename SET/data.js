@@ -4,32 +4,24 @@ const DATA = {
   descricaoPlaca: {
     titulo: "Checklist CL3500 setup",
     hardware: [
-
       { label: "Alimentação elétrica conectada", valor: "" },
       { label: "Tensão correta (3x380V + N + Terra)", valor: "" },
       { label: "Aterramento conectado", valor: "" },
-
       { label: "Ar comprimido ligado (se aplicável)", valor: "" },
       { label: "Pressão de ar dentro do especificado", valor: "" },
-
       { label: "Cabos e conectores bem fixados", valor: "" },
       { label: "Comunicação (Ethernet/RS-232) conectada", valor: "" },
-
       { label: "Sensores posicionados corretamente", valor: "" },
       { label: "Esteira livre e alinhada", valor: "" },
-
       { label: "Sistema limpo (sem sujeira/objetos)", valor: "" },
       { label: "Proteções e carenagens fechadas", valor: "" },
-
       { label: "Emergência (E-Stop) testada", valor: "" },
       { label: "Botões e IHM respondendo", valor: "" },
 
-      { label: "Parâmetros básicos carregados", valor: "" },
+      { label:  "<a href='./par/set_par.html?file=dataCL.js&set=basico'>Parâmetros básicos carregados</a>", valor: "" },
       { label: "Peso calibrado", valor: "" },
-
       { label: "Teste com produto realizado", valor: "" },
       { label: "Rejeição funcionando (se houver)", valor: "" }
-
     ],
   },
   tabs: [
@@ -42,9 +34,7 @@ const DATA = {
         "Abrange energização, ar comprimido e inicialização do sistema",
         "Não substitui o procedimento técnico completo de instalação"
       ]
-    },
-
-    {
+    }, {
       label: "Pré-requisitos",
       image: "../img/Painel.png",
       ordered: false,
@@ -55,21 +45,17 @@ const DATA = {
         "Esteiras livres de obstruções",
         "Sensores limpos e alinhados"
       ]
-    },
-
-    {
+    }, {
       label: "Energização",
       image: "../img/Painel.png",
       ordered: true,
       items: [
-        "<a href='manual_eletrico.html'>Verificar tensão de entrada e conexões elétricas</a>",
+        "Verificar tensão de entrada e conexões elétricas",
         "Ligar disjuntor geral do painel elétrico",
         "Aguardar inicialização do sistema",
         "Confirmar ausência de alarmes no controlador",
       ]
-    },
-
-    {
+    }, {
       label: "Ar comprimido",
       image: "../img/Pneumatico.png",
       ordered: true,
@@ -79,23 +65,18 @@ const DATA = {
         "Verificar ausência de vazamentos",
         "Confirmar atuação dos dispositivos pneumáticos"
       ]
-    },
-
-    {
+    }, {
       label: "Inicialização",
       image: "../img/Controlador.png",
       ordered: true,
       items: [
         { label: "Acessar o terminal de controle ", title: "HMI LK200 ou LK300" },
-
         "Selecionar modo de operação",
         "Inicializar sistema de transporte (esteiras)",
         "Verificar leitura dos sensores",
         "Confirmar comunicação entre módulos"
       ]
-    },
-
-    {
+    }, {
       label: "Teste rápido",
       image: "../img/EP.png",
       ordered: true,
@@ -106,9 +87,7 @@ const DATA = {
         "Validar atuação dos braços de classificação",
         "Observar saída correta do produto"
       ]
-    },
-
-    {
+    }, {
       label: "Validação",
       image: "../img/CL3500.png",
       ordered: false,

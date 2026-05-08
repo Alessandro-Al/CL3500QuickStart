@@ -1,0 +1,77 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f2f4f7;
+  padding: 24px;
+  color: #222;
+}
+
+/* Títulos */
+h3 {
+  margin-top: 28px;
+  padding: 10px 14px;
+  background: linear-gradient(90deg, #e6e6e6, #f5f5f5);
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  border-left: 4px solid #4a90e2;
+}
+
+/* Item */
+.item {
+  background: #ffffff;
+  padding: 10px 12px;
+  margin-bottom: 8px;
+  border-radius: 10px;
+  border: 1px solid #e0e0e0;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+  transition: all 0.2s ease;
+}
+
+.item:hover {
+  box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+  transform: translateY(-1px);
+}
+
+/* Nome do parâmetro */
+.name {
+  width: 280px;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Inputs */
+input {
+  width: 100px;
+  padding: 5px 6px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+  transition: 0.2s;
+}
+
+input:focus {
+  border-color: #4a90e2;
+  box-shadow: 0 0 0 2px rgba(74,144,226,0.2);
+}
+
+/* inválido */
+input.invalid {
+  border: 2px solid #e74c3c;
+  background: #ffecec;
+}
+
+/* default valor */
+.def {
+  color: #666;
+  font-size: 12px;
+}
+
+/* alterado */
+.changed {
+  border: 2px solid #f39c12;
+  background: #fff7e6;
+}
