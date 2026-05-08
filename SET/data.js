@@ -18,7 +18,7 @@ const DATA = {
       { label: "Emergência (E-Stop) testada", valor: "" },
       { label: "Botões e IHM respondendo", valor: "" },
 
-      { label:  "<a href='./PAR/set_par.html?file=dataCL.js&set=basico'>Parâmetros básicos carregados</a>", valor: "" },
+      { label:  "Parâmetros básicos carregados", valor: "" },
       { label: "Peso calibrado", valor: "" },
       { label: "Teste com produto realizado", valor: "" },
       { label: "Rejeição funcionando (se houver)", valor: "" }
@@ -75,6 +75,14 @@ const DATA = {
         "Inicializar sistema de transporte (esteiras)",
         "Verificar leitura dos sensores",
         "Confirmar comunicação entre módulos"
+      ]
+         }, {
+      label: "Parâmetros básicos",
+      image: "../img/Controlador.png",
+      ordered: false,
+      items: [
+        { label:  "<a href='./PAR/set_par.html?file=dataCL.js&set=basico'>Configurar Parâmetros básicos</a>" }
+
       ]
     }, {
       label: "Teste rápido",
