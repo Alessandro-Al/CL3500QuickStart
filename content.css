@@ -1,43 +1,22 @@
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  background: #f4f4f4;
-}
-
-header {
-  background: #003366;
-  color: #fff;
-  padding: 16px;
-}
-
 h2 {
-  margin: 20px auto 10px auto;
-  /* Centraliza horizontalmente e dá espaço em cima/baixo */
+  margin: 18px auto 14px auto;
   text-align: center;
-  /* Centraliza o texto dentro do h2 */
-  font-size: 36px;
-  /* Aumenta o tamanho do texto */
+  font-size: 26px;
   background-color: #359cb6;
-  /* Mantém a cor de destaque */
-  color: #fff;
-  /* Texto branco para melhor contraste */
-  padding: 12px 24px;
-  /* Mais espaço interno */
-  border-radius: 10px;
-  /* Cantos arredondados mais suaves */
-  /*  display: table;               /* Mantém a barra do tamanho do conteúdo */
-  font-weight: bold;
-  /* Negrito */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  /* Sombra mais visível */
+  color: white;
+  padding: 8px 18px;
+  border-radius: 8px;
+  font-weight: 600;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  width: fit-content;
 }
 
 .tabs {
   display: flex;
   border-bottom: 1px solid #ccc;
-  margin-bottom: 20px;
+  margin-bottom: 28px;
+  padding-left: 10px;
 }
-
 
 .tab {
   padding: 10px 16px;
@@ -53,19 +32,6 @@ h2 {
   background: #cfe3ff;
   transform: translateY(-2px);
 }
-
-/* .tab {
-  padding: 10px 16px;
-  cursor: pointer;
-  border: none;
-  background: #eee;
-  margin-right: 4px;
-  border-radius: 4px 4px 0 0;
-}
-
-.tab:hover {
-  background: #d0e7ff;
-} */
 
 .tab.active {
   background: #676caf;
@@ -88,7 +54,8 @@ h2 {
 
 ul,
 ol {
-  padding-bottom: 20px;
+  margin-bottom: 8px;
+  line-height: 1.45;
 }
 
 b {
@@ -114,7 +81,7 @@ b {
 #board-img {
   max-width: 100%;
   max-width: 700px;
-  
+
   object-fit: contain;
   border: 1px solid #ccc;
   border-radius: 6px;
@@ -122,23 +89,25 @@ b {
 
 .board-container {
   display: flex;
-  gap: 40px;
+  gap: 48px;
   align-items: flex-start;
-  margin-top: 20px;
+  margin-top: 28px;
+  margin-bottom: 36px;
 }
 
 .board-description {
   max-width: 800px;
   font-family: Arial, sans-serif;
   font-size: 14px;
-  line-height: 1;
+  line-height: 1.45;
 }
 
 .board-description p {
-  margin: 8px 0;
+  margin: 12px 0;
 }
 
 .board-description h3 {
   margin-top: 0;
   color: #2c3e50;
 }
+

@@ -1,76 +1,32 @@
-        .main-flex {
-            display: flex;
-            flex-direction: row;
-            align-items: flex-start;
-            gap: 32px;
-            justify-content: center;
-            margin-top: 32px;
-        }
+:root {
+    --main-color: #003366;
+    --background-color: #f0f2f5;
+    --padding: 8px 20px;
+}
 
-        .manual-image {
-            flex: 0 0 auto;
-            display: flex;
-            align-items: flex-start;
-            justify-content: center;
-            min-width: 300px;
-            max-width: 400px;
-        }
+header {
+    background: var(--main-color);
+    color: #fff;
+    padding: var(--padding);
+}
 
-        body {
-            font-family: Arial, sans-serif;
-            background: #f4f4f4;
-            margin: 0;
-        }
+footer {
+    margin-top: 40px;
+    padding: var(--padding);
+    background: var(--main-color);
+    color: white;
+    text-align: center;
+    font-size: 14px;
+    border-top: 2px solid #359cb6;
+}
 
-        header {
-            background: #003366;
-            color: #fff;
-            padding: 16px;
-        }
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  /* background: #f4f4f4; */
+  background: var(--background-color);
+}
 
-        .logo {
-            height: 60px;
-            margin-bottom: 10px;
-        }
-
-        .header-content {
-            display: flex;
-            align-items: center;
-            /* alinha verticalmente */
-            gap: 20px;
-            /* espaço entre logo e texto */
-        }
-
-        .container {
-            padding: 20px;
-            max-width: 500px;
-        }
-
-        .card {
-            background: #fff;
-            padding: 20px;
-            margin-bottom: 15px;
-            border-radius: 8px;
-            cursor: pointer;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
-            transition: all 0.2s ease;
-        }
-
-        .card:hover {
-            background: #eef5ff;
-            transform: translateY(-4px);
-        }
-
-        .title,
-        .versao {
-            font-size: 20px;
-            font-weight: bold;
-            margin-right: 10px;
-        }
-
-        .subtitle {
-            /* font-size: 14px;
-      font-weight: normal; */
-            color: #555;
-            margin-top: 8px;
-        }
+h1 {
+  color: var(--background-color);
+}

@@ -6,7 +6,6 @@ const nomes = {
   expert: "Expert"
 };
 
-
 const setAtual = getSetFromURL();
 
 let IDS = new Set(SETS[setAtual]);
@@ -24,9 +23,6 @@ script.onload = () => {
 };
 document.head.appendChild(script);
 
-
-
-
 console.log("file:", file);
 
 //--------------------------------------------function
@@ -39,8 +35,6 @@ function getSetFromURL() {
   const params = new URLSearchParams(window.location.search);
   return params.get("set") || "basico";
 }
-
-
 
 function render() {
   const app = document.getElementById("app");
@@ -124,17 +118,14 @@ async function salvarJS() {
     JSON.stringify(DATA, null, 2) +
     ";";
 
-
   conteudo = conteudo.replace(/    {\n/g, "    {");
   conteudo = conteudo.replace(/,\n/g, ",");
   conteudo = conteudo.replace(/\n    },/g, " },\n");
   conteudo = conteudo.replace(/\n    }\n/g, " }\n");
   conteudo = conteudo.replace(/],/g, "],\n");
 
-
   // primeira vez escolhe o arquivo original
   if (!fileHandle) {
-
     fileHandle = await window.showSaveFilePicker({
       suggestedName: file,
       types: [{
@@ -145,13 +136,9 @@ async function salvarJS() {
       }]
     });
   }
-
   const writable = await fileHandle.createWritable();
-
   await writable.write(conteudo);
-
   await writable.close();
-
   console.log("salvo:", file);
 }
 
