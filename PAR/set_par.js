@@ -101,6 +101,10 @@ function resetVisible() {
 }
 
 function resetAll() {
+
+   if (setAtual !== "expert") return;
+
+   
   for (const secao in DATA) {
     DATA[secao].forEach(p => {
       p.value = p.def;
@@ -145,8 +149,4 @@ async function salvarJS() {
 function trocarSet(nome) {
   IDS = new Set(SETS[nome]);
   render(); // 🔥 redesenha com novo filtro
-}
-
-function abrirAdmin() {
-  window.open("index2.html", "_blank");
 }
