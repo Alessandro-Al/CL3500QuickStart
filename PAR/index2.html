@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Todos os Parâmetros</title>
+
+</head>
+
+<body>
+  <h2>Todos os parâmetros</h2>
+  <div id="app"></div>
+  <select onchange="trocarSet(this.value)">
+    <option value="basico">Basico</option>
+    <option value="avancado">Avancado</option>
+    <option value="expert">Expert</option>
+  </select>
+  <button onclick="salvarArquivo()"> 💾 Salvar Lista</button>
+  <button onclick="toggleAll()">☑️ Marcar todos</button>
+  <button onclick="atualizarSubLista()">🔄 Atualizar lista</button>
+
+</body>
+
+</html>
