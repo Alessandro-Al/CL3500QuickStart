@@ -18,7 +18,7 @@ const DATA = {
       { label: "Emergência (E-Stop) testada", valor: "" },
       { label: "Botões e IHM respondendo", valor: "" },
 
-      { label:  "<a href='./par/set_par.html?file=dataCL.js&set=basico'>Parâmetros básicos carregados</a>", valor: "" },
+      { label:  "<a href='./PAR/set_par.html?file=dataCL.js&set=basico'>Parâmetros básicos carregados</a>", valor: "" },
       { label: "Peso calibrado", valor: "" },
       { label: "Teste com produto realizado", valor: "" },
       { label: "Rejeição funcionando (se houver)", valor: "" }
