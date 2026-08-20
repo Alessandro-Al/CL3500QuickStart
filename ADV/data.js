@@ -13,14 +13,14 @@ const DATA = {
       image: "../img/Controlador.png",
       ordered: false,
       items: [
-        { label:  "<a href='./PAR/set_par.html?file=dataCL.js&set=avancado'>Configurar Parâmetros avançados</a>" }
+        { label:  "<a href='./PAR/set_par.html?set=avancado'>Configurar Parâmetros avançados</a>" }
       ]
     }, {
       label: "Parâmetros expert",
       image: "../img/Controlador.png",
       ordered: false,
       items: [
-        { label:  "<a href='./PAR/set_par.html?file=dataCL.js&set=expert'>Configurar Parâmetros expert</a>" }
+        { label:  "<a href='./PAR/set_par.html?set=expert'>Configurar Parâmetros expert</a>" }
       ]
     }
   ]

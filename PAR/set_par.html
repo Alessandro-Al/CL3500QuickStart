@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="../base.css">
 
     <link rel="stylesheet" href="style.css">
-    <script src="lista_sets.js" defer></script>
+  
     <script src="set_par.js" defer></script>
 </head>
 
@@ -15,10 +15,24 @@
     <header>
         <h2 id="tituloSet">Parâmetro</h2>
     </header>
+
+    <div>
+        <button onclick="salvarJS()">💾 Salvar</button>
+ 
+        <button onclick="resetVisible()">↺ Reset</button>
+        <button onclick="trocarArquivo()">📂 Trocar Arquivo</button>
+
+        <input type="file" id="fileInput" accept=".js,.json">
+    
+    </div>
+
+
     <div id="app"></div>
-    <button onclick="salvarJS()">💾 Salvar JavaScript</button>
-    <button onclick="resetAll()">↺ Resetar Todos</button>
-    <button onclick="resetVisible()">↺ Reset Visíveis</button>
+   
+
+   
+
+
     <footer>
         CL3500 Quick Start © 2026
     </footer>

@@ -8,11 +8,12 @@ const DATA = {
     hardware: [
       { label: "Grau de Proteção:", valor: " IP 67 " },
       { label: "Construção:", valor: " Aço inoxidável - AISI 304 " },
-      { label: "Conectividade:", valor: " Serial:RS-232 Ethernet:IEEE 802.3 " },
+      { label: "Conectividade:", valor: " Serial:RS-232 | Ethernet:IEEE | 802.3 " },
       { label: "Tensão:", valor: " 3x380 + N " },
       { label: "Consumo:", valor: " 0,75 Kw " },
       { label: "Capacidade:", valor: " até 160 peças por minuto " },
       { label: "Resolução:", valor: " de 1 g" },
+      { label: "Pressão nominal:", valor: " 8 bar" }
     ],
   },
 
@@ -106,8 +107,10 @@ const DATA = {
       image: "../img/Pneumatico.png",
       ordered: false,
       items: [
-        "Sistema de controle do ar comprimido",
-        "Alimenta e regula os atuadores pneumáticos"
+        "Sistema de controle e distribuição de ar comprimido",
+        "Alimenta e regula os atuadores pneumáticos (braços)",
+        "Exige linha de ar limpa e lubrificada/seca",
+        "Pressão nominal de trabalho: 8 bar mínimo"
       ]
     },
   ]

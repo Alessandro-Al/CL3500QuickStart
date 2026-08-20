@@ -81,7 +81,7 @@ const DATA = {
       image: "../img/Controlador.png",
       ordered: false,
       items: [
-        { label:  "<a href='./PAR/set_par.html?file=dataCL.js&set=basico'>Configurar Parâmetros básicos</a>" }
+        { label:  "<a href='./PAR/set_par.html?set=basico'>Configurar Parâmetros básicos</a>" }
 
       ]
     }, {

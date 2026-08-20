@@ -43,6 +43,9 @@ h3 {
   color: #333;
 }
 
+
+
+
 /* Inputs */
 input {
   width: 100px;
@@ -75,3 +78,4 @@ input.invalid {
   border: 2px solid #f39c12;
   background: #fff7e6;
 }
+

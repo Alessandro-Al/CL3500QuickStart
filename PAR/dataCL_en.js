@@ -1,0 +1,70 @@
+const DATA = {
+"System Parameters": [
+{"id":"2C026409","name":"Language             :","value":       1,"min":       0,"max":       2,"def":       0,"unit":"  ","help":"0=Portuguese 1=English 2=Spanish"},
+{"id":"2C038005","name":"Operation Mode       :","value":       1,"min":       0,"max":       2,"def":       0,"unit":"  ","help":"0=Normal 1=Debug 2=Equipment Gauging"},
+{"id":"2402A002","name":"Weighing Delay       :","value":    2000,"min":       0,"max":    5000,"def":    2000,"unit":"ms","help":"Time to start weighing after sensor activation."},
+{"id":"2C04A009","name":"Unit                 :","value":       0,"min":       0,"max":       3,"def":       0,"unit":"  ","help":"Choose unit 0=g 1=kg 2=lb 3=oz"},
+{"id":"2C046009","name":"Separator            :","value":       0,"min":       0,"max":       1,"def":       0,"unit":"  ","help":"0=Comma (,) 1=Dot (.)"},
+{"id":"2C012009","name":"Decimal Places       :","value":       0,"min":       0,"max":       3,"def":       0,"unit":"  ","help":"3=x.xxx 2=xx.xx 1=xx.x 0=xxxx"},
+{"id":"3C006009","name":"Use PLC LK100        :","value":       0,"min":       0,"max":       2,"def":       0,"unit":"  ","help":"0:Disable 1:Enable 2:PLC Applicator (restart)"},
+{"id":"3D652009","name":"Pulsed Outputs PLC   :","value":       8,"min":       0,"max":      24,"def":       2,"unit":"  ","help":"2 for applicator; number of pulsed outputs"},
+{"id":"3D650009","name":"Continuous Outputs PLC:","value":       8,"min":       0,"max":      24,"def":       2,"unit":"  ","help":"2 for applicator; number of continuous outputs"},
+{"id":"32038009","name":"OP Mode              :","value":       0,"min":       0,"max":       1,"def":       0,"unit":"  ","help":"OP Source: 1=Visor"},
+{"id":"25236002","name":"Min Weight Range M   :","value":    1000,"min":       0,"max":  500000,"def":       0,"unit":"g ","help":"Minimum weight of the medium range"},
+{"id":"25232002","name":"Max Weight Range M   :","value":    2000,"min":       0,"max":  500000,"def":       0,"unit":"g ","help":"Maximum weight of the medium range"}
+],
+"Production Parameters": [
+{"id":"0E006000","name":"Production Date       :","value":       1,"min":       0,"max":       1,"def":       1,"unit":"  ","help":"1=Enable / 0=Disable"},
+{"id":"12006000","name":"Batch                :","value":       0,"min":       0,"max":       1,"def":       1,"unit":"  ","help":"1=Enable / 0=Disable"},
+{"id":"34006002","name":"Shift                :","value":       0,"min":       0,"max":       1,"def":       1,"unit":"  ","help":"1=Enable / 0=Disable"},
+{"id":"3000600A","name":"Sub-shift            :","value":       0,"min":       0,"max":       1,"def":       0,"unit":"  ","help":"1=Enable / 0=Disable"},
+{"id":"38006008","name":"Hammer               :","value":       0,"min":       0,"max":       1,"def":       0,"unit":"  ","help":"1=Enable / 0=Disable"},
+{"id":"10006004","name":"Yield Date           :","value":       0,"min":       0,"max":       1,"def":       0,"unit":"  ","help":"Yield calculation 1=Enable / 0=Disable"},
+{"id":"32006006","name":"Production Order     :","value":       0,"min":       0,"max":       1,"def":       0,"unit":"  ","help":"1=Enable / 0=Disable"},
+{"id":"3A006000","name":"Product              :","value":       1,"min":       0,"max":       1,"def":       0,"unit":"  ","help":"1=Enter product code; 0=Auto-detect barcode"},
+{"id":"0E036006","name":"Min Production Date  :","value":       1,"min":       0,"max":     180,"def":       1,"unit":"d ","help":"0=No / or enter the number of days."},
+{"id":"0E032006","name":"Max Production Date  :","value":       0,"min":       0,"max":       5,"def":       0,"unit":"d ","help":"0=No / or enter the number of days."},
+{"id":"34032006","name":"Maximum Shift        :","value":       4,"min":       1,"max":       9,"def":       4,"unit":"  ","help":"Defines the maximum number of allowed shifts."},
+{"id":"2200600A","name":"Validation           :","value":       0,"min":       0,"max":       1,"def":       0,"unit":"  ","help":"Enables or disables parameter validation."},
+{"id":"4200600A","name":"Login                :","value":       0,"min":       0,"max":       1,"def":       0,"unit":"  ","help":"Enables or disables Login"}
+],
+"Calibration Parameters": [
+{"id":"24036002","name":"Min Weight            :","value":     200,"min":       0,"max":   50000,"def":     200,"unit":"g ","help":"Minimum weight to consider a valid weighing."},
+{"id":"2400C002","name":"Calib. Weight Scale  :","value":    1000,"min":    1000,"max":  200000,"def":   10000,"unit":"g ","help":"Calibration weight must be between 20% and 120% of max w."},
+{"id":"1C022006","name":"Amp. Signal Filter    :","value":       7,"min":       0,"max":      10,"def":       8,"unit":"  ","help":"Filter accepted 0..10 Standard: 7"},
+{"id":"2404E002","name":"Intern Conv Rate     :","value":       0,"min":       0,"max":       7,"def":       1,"unit":"  ","help":"Internal Conversion Rate  0..7"},
+{"id":"2403200A","name":"Max Weight Scale     :","value":    5000,"min":    5000,"max":  500000,"def":   50000,"unit":"g ","help":"Maximum weight supported by the scale."},
+{"id":"1C038002","name":"Filter Mode          :","value":       1,"min":       0,"max":       2,"def":       1,"unit":"  ","help":"0=Standard filter 1=Fast filter"},
+{"id":"2403C005","name":"Grams Resolution     :","value":       1,"min":       1,"max":     100,"def":      10,"unit":"  ","help":"Default value: 1 Accepted: 1, 2, 5, 10, 20, 50, 100"}
+],
+"Weighing Parameters": [
+{"id":"2E006000","name":"Automatic Zero       :","value":       1,"min":       0,"max":       2,"def":       1,"unit":"  ","help":"Enable zero tracking: 0=No / 1=Yes"},
+{"id":"1C044008","name":"SW Filter            :","value":       0,"min":       0,"max":       1,"def":       0,"unit":"  ","help":"Enable software filter: 0=No / 1=Yes"},
+{"id":"2C03C001","name":"Grams Resolution     :","value":      10,"min":       1,"max":     100,"def":      10,"unit":"  ","help":"Default: 1. Accepted: 1, 2, 5, 10, 20, 50, 100"},
+{"id":"24010002","name":"Delta Value          :","value":      20,"min":       1,"max":     250,"def":      20,"unit":"g ","help":"Discards weights outside limit to calculate average."},
+{"id":"0D31E002","name":"Correction Factor P  :","value":   10000,"min":    9000,"max":   11000,"def":   10000,"unit":"  ","help":"Fine calibration adjustment. Default: 10000 = 100.00%"},
+{"id":"0D21E002","name":"Correction Factor M  :","value":   10000,"min":    9000,"max":   11000,"def":   10000,"unit":"  ","help":"Fine calibration adjustment. Default: 10000 = 100.00%"},
+{"id":"0D11E002","name":"Correction Factor G  :","value":   10000,"min":    9000,"max":   11000,"def":   10000,"unit":"  ","help":"Fine calibration adjustment. Default: 10000 = 100.00%"},
+{"id":"2E010006","name":"Zero Delta           :","value":       5,"min":       1,"max":      50,"def":       5,"unit":"g ","help":"Used to discard weights with higher variation."},
+{"id":"2E034006","name":"Zero Avg Samples Qty :","value":      50,"min":      10,"max":     500,"def":      50,"unit":"  ","help":"Number of samples considered for average."},
+{"id":"2E01200A","name":"Envelope Step        :","value":       5,"min":       1,"max":     100,"def":       5,"unit":"  ","help":"Number of samples for the step."},
+{"id":"2E016006","name":"Envelope Gap         :","value":      10,"min":       2,"max":     100,"def":      10,"unit":"g ","help":"Opening of the envelope activity area."}
+],
+"Classifier Parameters": [
+{"id":"3E032002","name":"Maximum Batch Pieces :","value":    5000,"min":      50,"max":    5000,"def":    5000,"unit":"pc","help":"Number of pieces to force a Batch."},
+{"id":"3E034002","name":"Max Average Buffer   :","value":    1000,"min":     100,"max":    1000,"def":    1000,"unit":"  ","help":"Number of pieces used by the intelligent algorithm."},
+{"id":"0604E00A","name":"Conveyor Speed       :","value":     500,"min":       1,"max":    2000,"def":     500,"unit":"v ","help":"In millimeters per second."},
+{"id":"3E008002","name":"Batch Close Delay    :","value":    1000,"min":      10,"max":    2000,"def":    1000,"unit":"ms","help":"Time to close the Batch after the last piece."},
+{"id":"3E002002","name":"Buffer ON            :","value":       0,"min":       0,"max":       2,"def":       1,"unit":"  ","help":"1=Enable Buffer; 2=turn conveyor ON."},
+{"id":"4001200A","name":"Number of Arms      :","value":       8,"min":       1,"max":      24,"def":       8,"unit":"  ","help":"Number of classifier arms."},
+{"id":"40000006","name":"Arms in 2 Rows      :","value":       0,"min":       0,"max":       1,"def":       0,"unit":"  ","help":"0=one row 1=two rows."},
+{"id":"40108006","name":"Arm 1 Wait Time      :","value":       0,"min":       0,"max":    5000,"def":       0,"unit":"ms","help":"Waiting time for the first arm."},
+{"id":"40014006","name":"Time Between Arms    :","value":       0,"min":       0,"max":    5000,"def":       0,"unit":"ms","help":"Delay time between arms in ms."},
+{"id":"0600800A","name":"Conveyor Delay Time  :","value":       0,"min":       0,"max":   10000,"def":       0,"unit":"ms","help":"Conveyor delay before opening."},
+{"id":"0604200A","name":"Conveyor Direction   :","value":       0,"min":       0,"max":       1,"def":       0,"unit":"  ","help":"0=same direction as classifier 1=opposite direction."},
+{"id":"4403800A","name":"Quality Mode         :","value":       0,"min":       0,"max":       4,"def":       0,"unit":"  ","help":"0=off;1=plc no reject;2=plc with reject;3=2 sensors;4=1 S"},
+{"id":"4404800A","name":"Quality Timeout       :","value":     300,"min":      10,"max":    2000,"def":     300,"unit":"ms","help":"Waiting time to receive a valid quality."},
+{"id":"4405000A","name":"No. Hooks Quality    :","value":     100,"min":       0,"max":    1000,"def":     100,"unit":"  ","help":"Hooks between the scale and the quality sensor. "},
+{"id":"4400600A","name":"Quality Search Time  :","value":      30,"min":       0,"max":    2000,"def":      30,"unit":"ms","help":"Maximum time to search for a valid quality."}
+]
+};

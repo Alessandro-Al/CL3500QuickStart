@@ -9,8 +9,25 @@
   <link rel="stylesheet" href="index.css">
 </head>
 
+
 <body>
   <header>
+
+ <div class="lang-dropdown">
+  <button class="lang-btn" onclick="toggleLangMenu()">
+    <span id="current-lang-text">🌐 PT</span>
+    <span class="arrow">▼</span>
+  </button>
+  
+  <div class="lang-curtain" id="langCurtain">
+   <button onclick="selectLanguage('pt')">🇧🇷 Português</button>
+    <button onclick="selectLanguage('en')">🇺🇸 English</button>
+    <button onclick="selectLanguage('es')">🇪🇸 Español</button>
+  </div>
+</div>
+
+
+
     <div class="header-content">
       <img src="./img/logo.png" alt="Logo" class="logo">
       <div class="header-text">
@@ -33,7 +50,7 @@
     </div>
   </div>
 
-  <script src="list.js"></script>
+  <!--  <script src="list.js"></script> -->
   <script src="index.js"></script>
 
   <footer>

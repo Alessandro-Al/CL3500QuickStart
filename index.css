@@ -63,3 +63,65 @@
     color: #555;
     margin-top: 8px;
 }
+
+/* Container fixado/alinhado à direita no header */
+.lang-dropdown {
+  position: relative;
+  display: inline-block;
+  float: right; /* Alinha o bloco à direita */
+  margin: 10px 15px; /* Afasta ligeiramente da borda da tela */
+}
+
+/* Botão principal */
+.lang-btn {
+  background: #004080;
+  color: #fff;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: bold;
+}
+
+/* A Cortina (Abre alinhada à direita do botão) */
+.lang-curtain {
+  position: absolute;
+  top: 100%;
+  right: 0; /* Alinha a borda direita da cortina com o botão */
+  left: auto; /* Garante que não estique para a esquerda */
+  background-color: #ffffff;
+  min-width: 150px; /* Largura suficiente para o texto */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 4px 0 4px 4px;
+  overflow: hidden;
+  z-index: 1000;
+  
+  max-height: 0;
+  transition: max-height 0.3s ease-in-out, opacity 0.2s ease-in-out;
+  opacity: 0;
+}
+
+/* Classe que o JS ativa para "desenrolar" a cortina */
+.lang-curtain.open {
+  max-height: 150px; /* Altura suficiente para os botões */
+  opacity: 1;
+}
+
+/* Estilo dos itens da cortina */
+.lang-curtain button {
+  width: 100%;
+  padding: 10px 12px;
+  border: none;
+  background: transparent;
+  text-align: left;
+  cursor: pointer;
+  font-size: 14px;
+  color: #333;
+}
+
+.lang-curtain button:hover {
+  background-color: #f0f0f0;
+}

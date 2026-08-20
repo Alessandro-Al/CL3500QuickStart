@@ -7,13 +7,40 @@ function getParam(name) {
 // Carrega o data.js dinamicamente via parâmetro dir
 (function () {
   const dir = getParam("dir") || "."; // padrão é a mesma pasta
+
+// Pega o idioma da URL ou do localStorage (padrão 'pt')
+  const lang = getParam("lang") || localStorage.getItem("cl3500_lang") || "pt";
+  
+  // Define o nome do arquivo conforme o idioma
+  const fileName = (lang === "pt") ? "data.js" : `data_${lang}.js`;
+  const primaryPath = `${dir}/${fileName}`;
+  const fallbackPath = `${dir}/data.js`;
+
   const script = document.createElement("script");
-  script.src = `${dir}/data.js`;
+  script.src = primaryPath;
   script.onload = () => {
     loadFirmware(); // só carrega o firmware depois do script
   };
   script.onerror = () => {
+
+if (primaryPath !== fallbackPath) {
+      console.warn(`Arquivo ${primaryPath} não encontrado. Tentando ${fallbackPath}`);
+      const fallbackScript = document.createElement("script");
+      fallbackScript.src = fallbackPath;
+      
+      fallbackScript.onload = () => {
+        loadFirmware();
+      };
+      
+      fallbackScript.onerror = () => {
+        document.querySelector('.board-container').innerHTML = "<b>Falha ao carregar data.js</b>";
+      };
+
+      document.head.appendChild(fallbackScript);
+    } else {
+
     document.querySelector('.board-container').innerHTML = "<b>Falha ao carregar data.js</b>";
+    }
   };
   document.head.appendChild(script);
 })();
@@ -150,3 +177,5 @@ function loadFirmware() {
   // Abre a primeira aba visível
   document.querySelector('.tab:not([style*="none"])')?.click();
 }
+
+
